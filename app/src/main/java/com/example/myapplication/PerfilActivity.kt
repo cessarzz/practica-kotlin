@@ -23,8 +23,6 @@ class PerfilActivity : AppCompatActivity() {
         setContentView(R.layout.activity_perfil)
         this.title = "MY PERFIL"
 
-        cargar()
-
         btn_perfil_editar.setOnClickListener {
             val intent = Intent(this, RegitroActivity::class.java)
             intent.putExtra("action", "editar")
