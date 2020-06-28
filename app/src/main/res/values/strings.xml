@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="item_datos_nombre_usuario">Nombre</string>
+    <string name="item_datos_nombre_usuario_example">César Zorrilla</string>
+</resources>
