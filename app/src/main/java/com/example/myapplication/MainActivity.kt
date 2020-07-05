@@ -3,7 +3,9 @@ package com.example.myapplication
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import com.google.android.material.snackbar.Snackbar
+import com.google.gson.Gson
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -35,6 +37,14 @@ class MainActivity : AppCompatActivity() {
         btn_login_registrar.setOnClickListener {
             val intent = Intent(this, RegitroActivity::class.java)
             startActivity(intent)
+        }
+
+        btn_test.setOnClickListener {
+            val usuario = Usuario("César", "Zorrilla", 24, "test@mail.com")
+            val intent = Intent(this, TestActivity::class.java)
+            intent.putExtra("usuario", Gson().toJson(usuario, Usuario::class.java))
+            startActivity(intent)
+            Log.d("gson", Gson().toJson(usuario, Usuario::class.java))
         }
 
     }
